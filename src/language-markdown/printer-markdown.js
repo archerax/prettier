@@ -464,10 +464,10 @@ function printListItem(path, options, print, listPrefix) {
 function alignListPrefix(prefix, options) {
   const additionalSpaces = getAdditionalSpaces();
   return (
-    prefix +
     " ".repeat(
       additionalSpaces >= 4 ? 0 : additionalSpaces, // 4+ will cause indented code block
     )
+    + prefix
   );
 
   function getAdditionalSpaces() {
